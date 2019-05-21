@@ -1,0 +1,28 @@
+#!/bin/bash
+# Définir les variables
+repertoire='/home/franck/franckformation/formation'
+moi=$1
+destination='/home/machin'
+ip='192.168.9.107'
+
+#On affiche
+echo "Bonjour $moi"
+echo "il y a $# argument(s)"
+
+if [ $# -ne 1 ]
+then
+    echo " problem"
+    exit
+cd ~/
+
+#Créer l'archive du répertoire
+tar -cf $moi.tar $repertoire
+
+
+#Copie chez romain
+#scp $moi.tar machin@$ip:$destination/$moi.tar
+
+
+#C'est fini, on affiche que cest le cas
+
+echo "finiiiiiii"

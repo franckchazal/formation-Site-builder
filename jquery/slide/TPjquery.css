@@ -1,0 +1,13 @@
+
+#diapo {
+    width: 300px;
+    height: 169px;
+    border: 1px solid red;
+    /*On force les éléments à se cacher s'ils sont en dehors de leur container*/
+    overflow: hidden;   
+}
+
+.image{
+    /*On force les img à ne pas dépasser la taille de leur contenant*/
+    max-width: 100%;
+}

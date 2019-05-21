@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Bonjour</h1>
+   
+</body>
+
+<script>
+        // Instanciation de l'objet XMLHTTPrequest  
+        // stocké dans la constante req   
+        const req = new XMLHttpRequest(); 
+
+        // Je fais une requête pour aller chercher mon fichier text, false=synchrone
+        // Je prépare ma requête
+        req.open("GET", "http://127.0.0.1:5500/XMLHTTPrequest/truc.txt", false); 
+
+        // J'exécute la requête / J'envoie la requête
+        req.send(null);
+
+        if (req.status === 200) {
+    // Yeah ! Super, nous avons un code de réponse OK
+    // Voyons le contenu de la réponse dans la console :
+        console.log(req.responseText);
+        console.log(req.status);
+        console.log(req.statusText);
+
+        } else {
+    // Crénom d’un vieux mérou, y’a une .ouille dans le potage !
+    // Nous n’avons pas eu un code de réponse OK, mais un autre...
+    // Voyons ça dans la console
+        console.log("Code de réponse :", req.status);
+
+    // Avec un peu plus d’info :
+        console.log("Code de réponse :", req.statusText);
+        }
+
+</script>
+
+</html>
