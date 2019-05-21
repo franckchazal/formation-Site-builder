@@ -1,0 +1,102 @@
+.row{
+    display: flex;
+    flex-flow: row wrap;
+}
+/*Media queries*/
+/*Grand écran*/
+
+@media screen and (min-width:1200px){
+
+/*Eléments qui prennent la place de 2 col*/
+.col-lg-2{
+    width: 14.583333333%; /*140px /960px x 100*/
+}
+
+/*Eléments qui prennent la place de 4 col*/
+.col-lg-4{
+    width: 31.25%; /*300px /960px x 100*/
+}
+
+/*Eléments qui prennent la place de 6 col*/
+.col-lg-6{
+    width: 47.916666667%; /*460px / 960p x 100*/
+}
+
+/*Eléments qui prennent la place de 8 col*/
+.col-lg-8{
+    width: 64.583333333%; /*620px / 960px x 100*/
+}
+
+/*Eléments qui prennent la place de 12 col*/
+.col-lg-12{
+    width: 97.916666667%; /*940px / 960px x 100*/
+}
+}
+
+
+/*Expression régulière pour récupérer tous les éléments qui appartiennent à un class qui commence par col-
+*/
+div[class^='col-']{
+    background-color: grey;
+    margin: 10px 1.041666667%; /*10 / 960 x 100*/
+}
+
+
+/*Ecrans moyens */
+@media screen and (max-width:1200px) and (min-width:980px){
+    
+/*Eléments qui prennent la place de 2 col*/
+.col-md-2{
+    width: 14.583333333%; /*140px /960px x 100*/
+}
+
+/*Eléments qui prennent la place de 4 col*/
+.col-md-4{
+    width: 31.25%; /*300px /960px x 100*/
+}
+
+/*Eléments qui prennent la place de 6 col*/
+.col-md-6{
+    width: 47.916666667%; /*460px / 960p x 100*/
+}
+
+/*Eléments qui prennent la place de 8 col*/
+.col-md-8{
+    width: 64.583333333%; /*620px / 960px x 100*/
+}
+
+/*Eléments qui prennent la place de 12 col*/
+.col-md-12{
+    width: 97.916666667%; /*940px / 960px x 100*/
+}
+}
+
+
+/*Ecrans petits */
+@media screen and (max-width:980px){
+    
+    /*Eléments qui prennent la place de 2 col*/
+    .col-sm-2{
+        width: 14.583333333%; /*140px /960px x 100*/
+    }
+    
+    /*Eléments qui prennent la place de 4 col*/
+    .col-sm-4{
+        width: 31.25%; /*300px /960px x 100*/
+    }
+    
+    /*Eléments qui prennent la place de 6 col*/
+    .col-sm-6{
+        width: 47.916666667%; /*460px / 960p x 100*/
+    }
+    
+    /*Eléments qui prennent la place de 8 col*/
+    .col-sm-8{
+        width: 64.583333333%; /*620px / 960px x 100*/
+    }
+    
+    /*Eléments qui prennent la place de 12 col*/
+    .col-sm-12{
+        width: 97.916666667%; /*940px / 960px x 100*/
+    }
+    }

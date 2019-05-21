@@ -1,0 +1,76 @@
+/*Une règle css est composée de:
+    -un sélecteur qui sélectionne les balises sur lesquelles le style va s'appliquer
+    -d'un bloc de code délimité par des accolades {}
+    -d'une ou plusieurs propriétés
+    -de la valeur de chaque propriété
+    -d'un ";" après la valeur de chaque propriété
+*/
+body
+{ /*standart du code css : un espace après le sélecteur*/
+    background-color:rgb(30, 91, 190);
+}
+/*standart du code css : pas d'espace avant ":" et un espace après*/
+
+/*Sélection par type*/
+article
+{
+    border: solid black 2px;  
+}
+
+/*Sélection par descendance, se lit à l'envers : les paragraphes qui sont dans des articles*/
+article p
+{
+    border:dashed white 2px;
+}
+
+/*Les sections et les headers et les footers*/
+section, header, footer
+{
+    border: 2px solid yellow;
+}
+
+/*Sélection par id "#" (une seule identité)  et/ou class "." (plusieurs éléments possibles) */
+
+.Nav_footer
+{
+    color: red;
+}
+
+#lien2
+{
+    color: rgb(255, 251, 0);
+}
+
+/*Sélection par pseudo class*/
+a:hover
+{
+    color:rgb(40, 226, 3);
+}
+
+/*Mise en page des spectacles à venir*/
+section.col-3
+{
+    border: 10px solid red;
+}
+/*La pseudo class ":after" permet de rajouter un élément comme dernier fils de l'élément spécifié dans
+ le sélecteur, il suffit ensuite de donner à ce nouvel élément ma propriété "clear" qui le fait passer
+ sous les éléments flottants*/
+section.col-3::after
+{
+    content:"";
+    display:block;
+    clear: both;
+    border: 15px green solid;
+}
+
+.col-3> article
+{
+    float: left;
+    width: 30%;
+}
+/*pour que les images s'adaptent à la taille de leur élément parent*/
+
+img
+{
+    max-width: 100%;
+}
